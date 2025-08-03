@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kashif's Tech Pulse</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero-section py-32">
+      <div class="container mx-auto px-6">
+        <div class="hero-content max-w-3xl mx-auto text-center">
+          <h1 class="text-5xl font-bold mb-6">Hi, I'm Kashif 👋</h1>
+          <p class="text-xl text-gray-400 mb-8">
+            I'm a passionate web developer who loves creating modern and
+            responsive websites. Through this blog, I share my journey,
+            tutorials, and everything I learn about web development, coding, and
+            tech in general. Whether you're a beginner or just curious, you're
+            welcome here!
+          </p>
+
+          <a href="https://github.com/kashif365">
+            <button
+              class="bg-accent text-white font-medium px-8 py-3 rounded-full hover:bg-opacity-90 transition-all border hero-btn"
+            >
+              View My GitHub →
+            </button></a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-6 py-16">
+      <!-- Search and Filter -->
+      <div class="max-w-4xl mx-auto mb-16">
+        <div class="flex flex-col md:flex-row gap-4">
+          <div class="relative flex-1">
+            <input
+              type="text"
+              id="search"
+              placeholder="Search articles..."
+              class="search-input w-full px-5 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-white"
+            />
+            <i class="fas fa-search absolute right-4 top-3.5 text-gray-500"></i>
+          </div>
+          <select
+            id="category"
+            class="dropdown-select px-4 py-3 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-accent"
+          >
+            <option value="all">All Categories</option>
+            <option value="tech" selected>Technology</option>
+            <option value="webdev">Web Development</option>
+            <option value="ai">AI & ML</option>
+            <option value="cloud">Cloud Computing</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Blog Posts Grid -->
+      <div class="max-w-7xl mx-auto">
+        <h2 class="text-2xl font-bold mb-8">Latest Articles</h2>
+        <div
+          id="blog-container"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+        >
+          <!-- Posts will be loaded here dynamically -->
+          <div class="col-span-full text-center py-12">
+            <i class="fas fa-spinner fa-spin text-4xl text-gray-500 mb-4"></i>
+            <p class="text-gray-400">Loading articles...</p>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="mt-16 flex justify-center">
+          <nav class="flex items-center space-x-2">
+            <button
+              id="prev-page"
+              class="pagination-btn px-4 py-2 rounded-md text-gray-300 hover:bg-accent hover:text-white disabled:opacity-50"
+            >
+              Previous
+            </button>
+            <div id="page-numbers" class="flex space-x-2"></div>
+            <button
+              id="next-page"
+              class="pagination-btn px-4 py-2 rounded-md text-gray-300 hover:bg-accent hover:text-white disabled:opacity-50"
+            >
+              Next
+            </button>
+          </nav>
+        </div>
+      </div>
+    </main>
+
+    <!-- Newsletter -->
+    <section class="bg-secondary py-16 mt-16">
+      <div class="container mx-auto px-6 max-w-3xl text-center">
+        <h2 class="text-3xl font-bold mb-4">
+          Stay updated with the latest tech
+        </h2>
+        <p class="text-gray-400 mb-8">
+          Subscribe to our newsletter for weekly articles and insights
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+          <input
+            type="email"
+            placeholder="Your email address"
+            class="search-input flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent text-white"
+          />
+          <button
+            class="px-6 py-3 bg-accent text-white font-medium rounded-lg hover:bg-opacity-90 transition-colors"
+          >
+            Subscribe
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary border-t border-gray-800 py-12">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <h2 class="text-2xl font-bold">Kashif's Tech Pulse</h2>
+            <p class="text-gray-400 mt-2">Exploring the future of technology</p>
+          </div>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+            <a
+              href="https://github.com/kashif365"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a
+              href="www.linkedin.com/in/kashif-hussain-232a3a367"
+              class="text-gray-400 hover:text-white transition-colors"
+            >
+              <i class="fab fa-linkedin text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">
+            © 2023 Kashif's Tech Pulse. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors"
+              >Privacy Policy</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors"
+              >Terms of Service</a
+            >
+            <a
+              href="#"
+              class="text-gray-500 hover:text-white text-sm transition-colors"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
